@@ -24,6 +24,5 @@ urlpatterns = [
     path('user/change_name', views.user_name_change, name="user_name_change"),
     path('trades/<int:trade_id>/change', views.trade_content_change, name="trade_content_change"),
     path('logout', views.logout, name="logout"),
-    path('message_receive', views.message_receive, name="message_receive"),
-    path('message_re', views.message_receive, name="message_re")
+    path('message_receive', views.message_receive, name="message_receive")
 ]
