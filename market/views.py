@@ -79,6 +79,7 @@ def trades(request) :
     trades = Trade.objects.all()
     result_trades = []
     for trade in trades :
+        user_name = trade.pub_user != None and trade.pub_user.name or ""
         result_trade = {
             'id' : trade.id, 
             'category' : trade.category.title, 
@@ -86,7 +87,7 @@ def trades(request) :
             'pub_datetime' : trade.pub_datetime,
             'photo' : trade.photo, 
             'price' : trade.price,
-            'pub_user' : trade.pub_user.name,
+            'pub_user' : user_name,
             'interest_count' : trade.interest_count}
         result_trades.append(result_trade)
     result = {'trades' : result_trades}
