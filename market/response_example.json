@@ -1,0 +1,64 @@
+{
+    "error_code" : 200,
+    "error_message" : "Success"
+}
+// 로그인
+{
+    "error_code" : 200,
+    "token" : "asdfzxdvc234zxcvzxcva",
+    "error_message" : "Success"
+}
+// 거래 목록
+{
+    "error_code" : 200,
+    "error_message" : "Success",
+    "trades" : [
+        {
+            "idx" : 1,
+            "category" : "잡화",
+            "title" : "USB 팝니다.",
+            "write_date" : "2019년 12월 12일",
+            "photo_url" : "https://kushare.com/photos/121/",
+            "price" : 3500,
+            "interest_count" : 33
+        }, 
+        {
+            "idx" : 2,
+            "category" : "잡화",
+            "title" : "키보드 팝니다.",
+            "write_date" : "2019년 12월 12일",
+            "photo_url" : "https://kushare.com/photos/122/",
+            "price" : 4500,
+            "interest_count" : 13
+        }
+    ]
+}
+// 카테고리 목록
+{
+    "error_code" : 200,
+    "error_message" : "Success",
+    "categorys" : [
+        {
+            "idx" : 1,
+            "name" : "생활용품"
+        },
+        {
+            "idx" : 2,
+            "name" : "패션/잡화"
+        }
+    ]
+}
+// 거래글 상세
+{
+    "error_code" : 200,
+    "error_message" : "Success",
+    "idx" : 1,
+    "category_name" : "생활용품",
+    "title" : "USB 팝니다.",
+    "write_date" : "2019년 12월 12일",
+    "content" : "64기가용 USB팝니다.",
+    "photo_url" : "https://kushare.com/photos/121/",
+    "price" : 3500,
+    "interest_count" : 33
+}
+// 거래글의 댓글 요청
