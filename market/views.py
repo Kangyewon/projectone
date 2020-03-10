@@ -483,3 +483,13 @@ def trade_content_change(request, trade_id) :
     trade.save()
 
     return make_response(200, "Success")
+
+@csrf_exempt
+def test_multipart(request):
+    if request.method != 'POST':
+        return make_response(404, "Failed")
+    form = UploadFileForm(request.POST, request.FILES)
+    if form.is_valid():
+        form.save()
+        return make_response(200, "Success")
+    return make_response(404, "Failed.")
