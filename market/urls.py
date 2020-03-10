@@ -10,7 +10,7 @@ urlpatterns = [
     path('trades', views.trades, name="trades"),
     path('trades/<int:category_id>', views.trades_with_category, name="trades_with_category"),
     path('trade/pub', views.pub_trade, name="pub_trade"),
-    path('trades/<int:trade_id>',views.trade, name="trade"),
+    path('trade/<int:trade_id>',views.trade, name="trade"),
     path('trades/<int:trade_id>/comments', views.comments, name='comments'),
     path('trades/<int:trade_id>/comment/pub', views.pub_comment, name='pub_comment'),
     path('user/trades',views.user_trades, name="user_trades"),
@@ -24,5 +24,6 @@ urlpatterns = [
     path('user/change_name', views.user_name_change, name="user_name_change"),
     path('trades/<int:trade_id>/change', views.trade_content_change, name="trade_content_change"),
     path('logout', views.logout, name="logout"),
-    path('message_receive', views.message_receive, name="message_receive")
+    path('message_receive', views.message_receive, name="message_receive"),
+    path('test_multipart', views.test_multipart, name="text_multipart")
 ]

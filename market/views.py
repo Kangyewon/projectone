@@ -20,7 +20,7 @@ def make_response(code, message):
 def user_login(request):
     user_id = request.POST['id']
     user_password = request.POST['password']
-    
+
     user = User.objects.get(user_email=user_id)
     if (user.user_password == user_password):
         encoded_str = user.name+str(random.random())
